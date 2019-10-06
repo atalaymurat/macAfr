@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as categoryActions from '../actions/categoryActions';
+import * as machineActions from '../actions/machineActions';
 import {Badge, ListGroup, ListGroupItem} from 'reactstrap';
 
 class CategoryList extends Component {
@@ -11,6 +12,7 @@ class CategoryList extends Component {
 
   selectCategory = cat => {
     this.props.actions.changeCategory(cat);
+    this.props.actions.getMachines(cat.category_id)
   };
   categoriesFilter = list => {
     return list.filter(cat => cat.category !== '');
@@ -59,6 +61,10 @@ function mapDispatchToProps(dispatch) {
         categoryActions.changeCategory,
         dispatch,
       ),
+      getMachines: bindActionCreators(
+        machineActions.getMachines, 
+        dispatch
+      )
     },
   };
 }

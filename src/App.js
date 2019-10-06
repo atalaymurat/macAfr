@@ -12,10 +12,10 @@ function App() {
       <Container>
         <h2>machineafrica.com</h2>
         <Row>
-          <Col xs="4">
+          <Col sm="4">
             <CategoryList />
           </Col>
-          <Col xs="8">
+          <Col sm="8">
             <MachineList />
           </Col>
         </Row>
