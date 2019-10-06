@@ -1,11 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import CategoryList from './components/CategoryList';
+import Navbar from './components/NavBar';
+import MachineList from './components/MachineList';
+import {Row, Col, Container} from 'reactstrap';
 
 function App() {
   return (
     <div>
-      <h2>machineafrica.com</h2>
+      <Navbar />
+      <Container>
+        <h2>machineafrica.com</h2>
+        <Row>
+          <Col xs="4">
+            <CategoryList />
+          </Col>
+          <Col xs="8">
+            <MachineList />
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
