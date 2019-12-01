@@ -6,7 +6,6 @@ import * as machineActions from '../actions/machineActions';
 import {
   Card,
   CardDeck,
-  CardImg,
   CardSubtitle,
   CardHeader,
   CardTitle,
@@ -32,12 +31,6 @@ class MachineList extends Component {
         </h3>
             {this.props.machines.map(mac => (
               <Card className="mb-2" key={mac.id}>
-              <CardImg
-                top
-                width="100%"
-                src="https://picsum.photos/200/115"
-                alt="Card image cap"
-              />
               <CardBody>
                 <CardTitle>{mac.title}</CardTitle>
                 <CardSubtitle>category id : { mac.category_id } </CardSubtitle>
