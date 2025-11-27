@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "http://machineafrica.com/build",
   "devDependencies": {
-    "react-scripts": "3.2.0"
+    "react-scripts": "5.0.1"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
